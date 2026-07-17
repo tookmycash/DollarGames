@@ -275,15 +275,6 @@ section { position: relative; }
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
-/* When only one developer card is present, center it instead of stretching it */
-.team-grid:has(.dev-card:only-child) {
-  display: flex;
-  justify-content: center;
-}
-.team-grid:has(.dev-card:only-child) .dev-card {
-  max-width: 360px;
-  width: 100%;
-}
 .dev-card {
   border: var(--border) solid var(--ink);
   border-radius: var(--radius);
