@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DollarGames — VR Experiences, Built by Hand</title>
+<meta name="description" content="DollarGames is a small VR game studio building experiences in Unity 6.3 with hand-crafted 3D art from Blender." />
+<link rel="icon" href="assets/images/logo.png" />
+
+<!-- Fonts: swap these families in css/style.css (:root) to re-theme the type -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     Hand-drawn "wobble" filter — makes borders look ink-sketched,
+     matching the DollarGames logo. Applied via class="wobble".
+     Present once per page; do not remove.
+     ============================================================ -->
+<svg width="0" height="0" style="position:absolute">
+  <filter id="wobble">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" result="noise" seed="4" />
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" />
+  </filter>
+</svg>
+
+<!-- ============================================================
+     HEADER / NAV — appears identically on every page.
+     Edit the studio name and links here.
+     ============================================================ -->
+<header class="site-header wobble">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="assets/images/logo.png" alt="DollarGames logo" />
+      <span>DollarGames</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="index.html#studio">Studio</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#games">Games</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO — replace the headline, subhead, and hero image below.
+     ============================================================ -->
+<section id="hero" class="hero">
+  <div class="container">
+    <div class="hero-copy">
+      <p class="eyebrow">
+        <svg class="doodle-smile" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#C9EAD1" stroke="#15171C" stroke-width="2.5"/><circle cx="9" cy="10" r="1.4" fill="#15171C"/><circle cx="15" cy="10" r="1.4" fill="#15171C"/><path d="M8 14c1.5 1.5 6.5 1.5 8 0" stroke="#15171C" stroke-width="2" stroke-linecap="round"/></svg>
+        Independent VR Studio
+      </p>
+      <h1>We build <span class="highlight">VR worlds</span> you can actually feel.</h1>
+      <p class="lede">DollarGames is a small studio crafting immersive VR experiences in Unity 6.3, with every asset hand-modeled in Blender. Small team, big worlds.</p>
+      <div class="hero-actions">
+        <a href="#games" class="btn">Play our games</a>
+        <a href="#team" class="btn btn-ghost wobble">Meet the team</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="assets/images/logo.png" alt="DollarGames logo — a smiling dollar bill" />
+      <span class="tag-float t1 wobble">UNITY 6.3</span>
+      <span class="tag-float t2 wobble">BLENDER</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     STUDIO / TOOLS — replace the copy in each card as needed.
+     ============================================================ -->
+<section id="studio" class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">
+        <svg class="doodle-smile" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#E4DBFF" stroke="#15171C" stroke-width="2.5"/><circle cx="9" cy="10" r="1.4" fill="#15171C"/><circle cx="15" cy="10" r="1.4" fill="#15171C"/><path d="M8 14c1.5 1.5 6.5 1.5 8 0" stroke="#15171C" stroke-width="2" stroke-linecap="round"/></svg>
+        How we work
+      </p>
+      <h2>Two tools, one studio.</h2>
+      <p>Everything we ship moves between two programs — a game engine for how it feels, and a modeling suite for how it looks.</p>
+    </div>
+
+    <div class="tool-grid">
+      <div class="tool-card wobble reveal">
+        <h3>Unity 6.3</h3>
+        <p>Our engine of choice for building and shipping VR experiences — physics, interaction, and comfort-tuned locomotion all live here.</p>
+        <ul>
+          <li><svg class="doodle-smile" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#C9EAD1" stroke="#15171C" stroke-width="2"/><circle cx="9" cy="10" r="1.2" fill="#15171C"/><circle cx="15" cy="10" r="1.2" fill="#15171C"/><path d="M8 14c1.5 1.5 6.5 1.5 8 0" stroke="#15171C" stroke-width="1.6" stroke-linecap="round"/></svg> Room-scale &amp; hand-tracked interaction</li>
+          <li><svg class="doodle-smile" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#C9EAD1" stroke="#15171C" stroke-width="2"/><circle cx="9" cy="10" r="1.2" fill="#15171C"/><circle cx="15" cy="10" r="1.2" fill="#15171C"/><path d="M8 14c1.5 1.5 6.5 1.5 8 0" stroke="#15171C" stroke-width="1.6" stroke-linecap="round"/></svg> Built for standalone &amp; PC headsets</li>
+          <li><svg class="doodle-smile" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#C9EAD1" stroke="#15171C" stroke-width="2"/><circle cx="9" cy="10" r="1.2" fill="#15171C"/><circle cx="15" cy="10" r="1.2" fill="#15171C"/><path d="M8 14c1.5 1.5 6.5 1.5 8 0" stroke="#15171C" stroke-width="1.6" stroke-linecap="round"/></svg> Performance-tuned for comfortable frame rates</li>
+        </ul>
+      </div>
+
+      <div class="tool-card wobble is-specialty reveal">
+        <span class="ribbon wobble">Our specialty</span>
+        <h3>Blender</h3>
+        <p>Every character, prop, and environment starts as a hand-built mesh — modeling and texturing is where this studio is strongest.</p>
+        <ul>
+          <li><svg class="doodle-smile" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#fff" stroke="#15171C" stroke-width="2"/><circle cx="9" cy="10" r="1.2" fill="#15171C"/><circle cx="15" cy="10" r="1.2" fill="#15171C"/><path d="M8 14c1.5 1.5 6.5 1.5 8 0" stroke="#15171C" stroke-width="1.6" stroke-linecap="round"/></svg> Hand-modeled characters &amp; props</li>
+          <li><svg class="doodle-smile" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#fff" stroke="#15171C" stroke-width="2"/><circle cx="9" cy="10" r="1.2" fill="#15171C"/><circle cx="15" cy="10" r="1.2" fill="#15171C"/><path d="M8 14c1.5 1.5 6.5 1.5 8 0" stroke="#15171C" stroke-width="1.6" stroke-linecap="round"/></svg> Custom texturing &amp; sculpting</li>
+          <li><svg class="doodle-smile" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#fff" stroke="#15171C" stroke-width="2"/><circle cx="9" cy="10" r="1.2" fill="#15171C"/><circle cx="15" cy="10" r="1.2" fill="#15171C"/><path d="M8 14c1.5 1.5 6.5 1.5 8 0" stroke="#15171C" stroke-width="1.6" stroke-linecap="round"/></svg> Optimized topology for real-time VR</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TEAM / PORTFOLIO — duplicate a .dev-card to add a developer.
+     Replace image, name, role, bio, and tags for each person.
+     ============================================================ -->
+<section id="team" class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">
+        <svg class="doodle-smile" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#FFE8B8" stroke="#15171C" stroke-width="2.5"/><circle cx="9" cy="10" r="1.4" fill="#15171C"/><circle cx="15" cy="10" r="1.4" fill="#15171C"/><path d="M8 14c1.5 1.5 6.5 1.5 8 0" stroke="#15171C" stroke-width="2" stroke-linecap="round"/></svg>
+        Portfolio
+      </p>
+      <h2>The people behind the worlds.</h2>
+      <p>A small team wearing a lot of hats — replace this grid with your own studio's developers.</p>
+    </div>
+
+    <div class="team-grid">
+      <!-- Developer 1 -->
+      <article class="dev-card wobble reveal">
+        <div class="avatar"><img src="assets/images/dev-1.svg" alt="Portrait of a DollarGames developer" /></div>
+        <div class="dev-info">
+          <h3>Jordan Rivera</h3>
+          <p class="role">Founder &amp; Lead Developer</p>
+          <p class="bio">Builds gameplay systems and VR interaction in Unity, from prototype to polish.</p>
+          <div class="dev-tags"><span>Unity</span><span>Gameplay</span><span>VR&nbsp;Design</span></div>
+        </div>
+      </article>
+
+      <!-- Developer 2 -->
+      <article class="dev-card wobble reveal">
+        <div class="avatar"><img src="assets/images/dev-2.svg" alt="Portrait of a DollarGames developer" /></div>
+        <div class="dev-info">
+          <h3>Sam Okafor</h3>
+          <p class="role">3D Artist</p>
+          <p class="bio">Sculpts and textures every environment and prop that ends up in a headset.</p>
+          <div class="dev-tags"><span>Blender</span><span>Texturing</span><span>Lighting</span></div>
+        </div>
+      </article>
+
+      <!-- Developer 3 -->
+      <article class="dev-card wobble reveal">
+        <div class="avatar"><img src="assets/images/dev-3.svg" alt="Portrait of a DollarGames developer" /></div>
+        <div class="dev-info">
+          <h3>Casey Lindqvist</h3>
+          <p class="role">Technical Artist</p>
+          <p class="bio">Bridges Blender and Unity — rigging, optimization, and making sure it all runs smoothly.</p>
+          <div class="dev-tags"><span>Rigging</span><span>Unity</span><span>Optimization</span></div>
+        </div>
+      </article>
+
+      <!-- To add another developer, copy one <article class="dev-card"> block above. -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GAMES — Proximity is a live project; the second card is a
+     "Coming Soon" placeholder. Duplicate a .game-card to add more.
+     ============================================================ -->
+<section id="games" class="section section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">
+        <svg class="doodle-smile" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#C9EAD1" stroke="#15171C" stroke-width="2.5"/><circle cx="9" cy="10" r="1.4" fill="#15171C"/><circle cx="15" cy="10" r="1.4" fill="#15171C"/><path d="M8 14c1.5 1.5 6.5 1.5 8 0" stroke="#15171C" stroke-width="2" stroke-linecap="round"/></svg>
+        Games
+      </p>
+      <h2>What we're building.</h2>
+      <p>One shipped world, one more taking shape.</p>
+    </div>
+
+    <div class="games-grid">
+      <!-- Proximity -->
+      <article class="game-card wobble reveal">
+        <div class="cover">
+          <img src="assets/images/game-proximity.svg" alt="Proximity key art" />
+        </div>
+        <div class="game-info">
+          <h3>Proximity</h3>
+          <p class="desc">A tense VR experience about distance, trust, and what happens when something gets too close. Built in Unity 6.3 with fully hand-modeled environments.</p>
+          <div class="game-tags">
+            <span>VR</span><span>Unity&nbsp;6.3</span><span>Available&nbsp;Now</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Coming Soon placeholder -->
+      <article class="game-card is-soon wobble reveal">
+        <div class="cover">
+          <img src="assets/images/coming-soon-bg.svg" alt="" aria-hidden="true" />
+          <span class="soon-badge wobble">Coming Soon</span>
+        </div>
+        <div class="game-info">
+          <h3>Untitled Project</h3>
+          <p class="desc">Something new is in early development. Swap this card's image, title, and description once you're ready to reveal it.</p>
+          <div class="game-tags">
+            <span>VR</span><span>In&nbsp;Development</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- To add another game, copy a <article class="game-card"> block above. -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER — appears identically on every page.
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-brand">
+      <img src="assets/images/logo.png" alt="DollarGames logo" />
+      <span>&copy; <span id="year"></span> DollarGames. All rights reserved.</span>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="index.html#studio">Studio</a>
+      <a href="index.html#team">Team</a>
+      <a href="index.html#games">Games</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — DollarGames</title>
+<meta name="description" content="Get in touch with DollarGames." />
+<link rel="icon" href="assets/images/logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute">
+  <filter id="wobble">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" result="noise" seed="4" />
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" />
+  </filter>
+</svg>
+
+<header class="site-header wobble">
+  <div class="container">
+    <a href="index.html" class="brand">
+      <img src="assets/images/logo.png" alt="DollarGames logo" />
+      <span>DollarGames</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="index.html#studio">Studio</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#games">Games</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom:60px;">
+  <div class="container" style="display:block; max-width: 720px;">
+    <p class="eyebrow">
+      <svg class="doodle-smile" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" fill="#C9EAD1" stroke="#15171C" stroke-width="2.5"/><circle cx="9" cy="10" r="1.4" fill="#15171C"/><circle cx="15" cy="10" r="1.4" fill="#15171C"/><path d="M8 14c1.5 1.5 6.5 1.5 8 0" stroke="#15171C" stroke-width="2" stroke-linecap="round"/></svg>
+      Get in touch
+    </p>
+    <h1 style="font-size:clamp(34px,5vw,52px); margin-bottom:16px;">Let's talk <span class="highlight">VR</span>.</h1>
+    <p class="lede">Questions about Proximity, a collaboration idea, or just want to say hi — reach out below.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Contact details — replace with your studio's real info -->
+      <div class="contact-card wobble reveal">
+        <h3 style="font-family:var(--font-display); font-size:22px; margin-bottom:6px;">Studio Info</h3>
+        <p style="color:var(--ink-soft); margin-bottom:10px;">Reach us directly through any of these.</p>
+        <ul class="contact-list">
+          <li><span class="label">Email</span><a href="mailto:hello@dollargames.example">hello@dollargames.example</a></li>
+          <li><span class="label">Discord</span><a href="#">discord.gg/dollargames</a></li>
+          <li><span class="label">X</span><a href="#">@dollargames</a></li>
+          <li><span class="label">Location</span><span>Remote studio</span></li>
+        </ul>
+      </div>
+
+      <!-- Contact form — see note below on connecting a real backend -->
+      <div class="contact-card wobble reveal">
+        <h3 style="font-family:var(--font-display); font-size:22px; margin-bottom:6px;">Send a Message</h3>
+        <p style="color:var(--ink-soft); margin-bottom:20px;">Fill this out and we'll get back to you.</p>
+
+        <!--
+          GitHub Pages only serves static files — this form has no
+          server to submit to yet. To make it actually deliver
+          messages, sign up for a free form backend (e.g. Formspree,
+          Getform, Web3Forms) and set the action below to the URL
+          they give you, for example:
+
+            <form id="contact-form" action="https://formspree.io/f/yourID" method="POST">
+
+          Until then, the form just shows a confirmation message
+          (see js/script.js).
+        -->
+        <form id="contact-form">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send message</button>
+          <p class="form-note">This form isn't connected to a backend yet — see the comment in this file's HTML.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-brand">
+      <img src="assets/images/logo.png" alt="DollarGames logo" />
+      <span>&copy; <span id="year"></span> DollarGames. All rights reserved.</span>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="index.html#studio">Studio</a>
+      <a href="index.html#team">Team</a>
+      <a href="index.html#games">Games</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
